@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz App! Bookmark</title>
+    <title>Quiz App!</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <h1>WebDev Quizzle - Bookmarks</h1>
+      <h1>WebDev Quizzle</h1>
     </header>
     <main>
       <section class="card">
@@ -17,42 +17,60 @@
         <div class="flex-container">
           <button class="answer-button">Show Answer</button>
         </div>
-        <section class="tags">
+        <ul class="tags">
           <button>#html</button>
           <button>#flexbox</button>
           <button>#css</button>
-        </section>
-        <div class="bookmark-icon"></div>
+        </ul>
+        <img
+          alt="bookmark icon"
+          class="bookmark--icon"
+          src="icons/bookmark-black.png"
+        />
       </section>
       <section class="card">
         <p class="question">What properties flips the axes in flexbox?</p>
         <div class="flex-container">
           <button class="answer-button">Show Answer</button>
         </div>
-        <section class="tags">
+        <ul class="tags">
           <button>#html</button>
           <button>#flexbox</button>
           <button>#css</button>
-        </section>
-        <div class="bookmark-icon"></div>
+        </ul>
+        <img
+          alt="bookmark icon"
+          class="bookmark--icon"
+          src="icons/bookmark-black.png"
+        />
       </section>
       <section class="card">
         <p class="question">What properties flips the axes in flexbox?</p>
         <div class="flex-container">
           <button class="answer-button">Show Answer</button>
         </div>
-        <section class="tags">
+        <ul class="tags">
           <button>#html</button>
           <button>#flexbox</button>
           <button>#css</button>
-        </section>
-        <div class="bookmark-icon"></div>
+        </ul>
+        <img
+          alt="bookmark icon"
+          class="bookmark--icon"
+          src="icons/bookmark-black.png"
+        />
       </section>
     </main>
     <footer class="navigation">
-      <a href="index.html">Questions</a>
-      <a href="bookmark.html">Bookmarks</a>
-      <a href="profile.html">Profile</a>
+      <a aria-label="go to homepage" href="index.html"
+        ><img alt="home icon" src="icons/home.png"
+      /></a>
+      <a aria-label="go to bookmark site" class="active" href="bookmark.html"
+        ><img alt="bookmark icon" src="icons/bookmark-black.png"
+      /></a>
+      <a aria-label="go to profile site" href="profile.html"
+        ><img alt="profile icon" src="icons/user.png"
+      /></a>
     </footer>
   </body>
 </html>
