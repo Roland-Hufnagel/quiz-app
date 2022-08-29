@@ -4,16 +4,33 @@
   box-sizing: border-box;
 }
 body {
+  margin: 0;
+  padding: 0;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding-top: 110px;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
 }
 h1,
 h2 {
   text-align: center;
+  padding: 5px;
+}
+header {
+  background-color: lightblue;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
 }
 .card {
   border: 2px solid black;
   border-radius: 3px;
-  max-width: 400px;
+  max-width: 500px;
   margin: 40px auto;
   position: relative;
 }
@@ -27,6 +44,7 @@ h2 {
   text-align: center;
   margin-bottom: 20px;
   padding: 5px;
+  font-size: 1rem;
 }
 .flex-container {
   display: flex;
@@ -43,5 +61,14 @@ h2 {
   position: absolute;
   top: -28px;
   right: 20px;
-  z-index: 10;
+ 
 }
+
+.navigation {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
