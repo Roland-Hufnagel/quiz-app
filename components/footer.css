@@ -16,3 +16,7 @@
   .footer__image {
     width: 50px;
   }
+  .footer--active {
+    background-color: white;
+    border-radius: 10px;
+  }
