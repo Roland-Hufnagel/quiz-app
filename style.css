@@ -11,9 +11,13 @@
   --bg-colorHeaderFooter: lightblue;
 }
 body {
-  padding-top: 100px;
-  padding-bottom: 110px;
+  margin: 0;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.container {
+  display: grid; /* Die Hauptseite hat ein Grid-Layout: 1 Spalte, 3 Zeilen */
+  grid-template-rows: 100px 1fr 100px; /* Die erste Zeile ist 100px hoch, die letzte auch, der Rest geht in die Mitte */
+  height: 100vh; /* Der Container, d.h. der Body, ist nur so hoch wie der Viewport */
 }
 h1 {
   text-align: center;
@@ -21,5 +25,5 @@ h1 {
 .main {
   display: flex;
   flex-flow: row wrap;
+  overflow: auto; /* Alles was überläuft ist über scrollen erreichbar */
 }
-

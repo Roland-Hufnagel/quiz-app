@@ -5,10 +5,10 @@
     background-color: var(--bg-colorHeaderFooter);
     display: flex;
     justify-content: center;
-    position: fixed;
+    /* position: fixed;
     bottom: 0;
     left: 0;
-    right: 0;
+    right: 0; */
   }
   .footer__link {
     padding: 15px;
