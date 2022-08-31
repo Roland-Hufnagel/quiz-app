@@ -1,60 +1,57 @@
-
 .card {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    border: 3px solid black;
-    border-radius: 3px;
-    max-width: 300px;
-    margin: 20px auto;
-    position: relative;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  .card__question {
-    margin: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-  }
-  .card__answer{
-    font-family:monospace
-  }
-  .card__answer--on{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 3px;
+  max-width: 300px;
+  margin: 20px auto;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card__question {
+  margin: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+.card__answer {
+  font-family: monospace;
+}
+/* .card__answer--on{
     display: block;
-  }
-  .card__answer--off{
-    display: none;
-  }
+  } */
+.card__answer--off {
+  display: none;
+}
 
+.card__answer-button {
+  margin: 0 auto;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  border: 1px solid;
+}
+.car__answer-button--blue {
+  background-color: blue;
+}
+.card__answer-button:hover {
+  cursor: pointer;
+}
 
-  .card__answer-button {
-    margin: 0 auto;
-    text-align: center;
-    padding: 5px;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    border: 1px solid;
-  }
-  .car__answer-button--blue{
-    background-color: blue;
-
-  }
-  .card__answer-button:hover {
-    cursor: pointer;
-  }
-  
-  .card__bookmark-icon {
-    width: 30px;
-    position: absolute;
-    top: -10px;
-    right: 10px;
-    background-color: white;
-  }
-  .card__bookmark-icon:hover {
-    cursor: pointer;
-  }
-  .card__tag-list{
-    padding: 0;         /* a list has as default: padding-left: 20px; */
-  }
-  .card__list-item{
-    display: inline;
-  }
+.card__bookmark-icon {
+  width: 30px;
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background-color: white;
+}
+.card__bookmark-icon:hover {
+  cursor: pointer;
+}
+.card__tag-list {
+  padding: 0; /* a list has as default: padding-left: 20px; */
+}
+.card__list-item {
+  display: inline;
+}
