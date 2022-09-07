@@ -16,6 +16,7 @@
 }
 .card__answer {
   font-family: monospace;
+  margin: 1em;
 }
 /* .card__answer--on{
     display: block;

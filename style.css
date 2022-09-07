@@ -16,14 +16,34 @@ body {
 }
 .container {
   display: grid; /* Die Hauptseite hat ein Grid-Layout: 1 Spalte, 3 Zeilen */
-  grid-template-rows: 100px 1fr 100px; /* Die erste Zeile ist 100px hoch, die letzte auch, der Rest geht in die Mitte */
+  grid-template-rows: 110px 1fr 100px; /* Die erste Zeile ist 100px hoch, die letzte auch, der Rest geht in die Mitte */
   height: 100vh; /* Der Container, d.h. der Body, ist nur so hoch wie der Viewport */
 }
-h1 {
-  text-align: center;
-}
+
 .main {
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
   overflow: auto; /* Alles was überläuft ist über scrollen erreichbar */
+}
+
+@media (min-width: 600px){
+  .main {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (min-width: 800px){
+  .main {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
 }
