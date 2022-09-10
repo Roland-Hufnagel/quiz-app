@@ -6,11 +6,7 @@
     left: 0;
     z-index: 10; */
     border-bottom: 1px solid black;
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    align-items: flex-start;
-  }
-  .addCardButton{
+    text-align: center;
     
   }
+  

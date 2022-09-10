@@ -18,9 +18,7 @@
   font-family: monospace;
   margin: 1em;
 }
-/* .card__answer--on{
-    display: block;
-  } */
+
 .card__answer--off {
   display: none;
 }

@@ -7,11 +7,11 @@
     <title>Quiz App!</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="container">
     <header class="header">
       <h1>WebDev Quizzle</h1>
     </header>
-    <main class="main">
+    <main class="main grid-container">
 
       <section class="card">
         <p class="card__question">What properties flips the axes in flexbox?</p>
@@ -147,16 +147,28 @@
         href="index.html"
         class="footer__link"
         aria-label="go to homepage"
-        ><img class="footer__image" alt="home icon" src="icons/home.png"
+        ><img 
+          class="footer__image" 
+          alt="home icon" 
+          src="icons/home.png"
       /></a>
       <a
         href="bookmark.html"
-        class="footer--active footer__link"
+        class="footer__link footer--active "
         aria-label="go to bookmark site"
         ><img
           class="footer__image"
           alt="bookmark icon"
           src="icons/bookmark-black.png"
+      /></a>
+      <a
+        href="form.html"
+        class="footer__link"
+        aria-label="go to create cards site"
+        ><img
+          class="footer__image"
+          alt="create card icon"
+          src="icons/notes.png"
       /></a>
       <a
         href="profile.html"

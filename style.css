@@ -1,6 +1,7 @@
 @import url(components/card.css);
 @import url(components/header.css);
 @import url(components/footer.css);
+@import url(components/form.css);
 
 *,
 *::before,
@@ -16,34 +17,39 @@ body {
 }
 .container {
   display: grid; /* Die Hauptseite hat ein Grid-Layout: 1 Spalte, 3 Zeilen */
-  grid-template-rows: 110px 1fr 100px; /* Die erste Zeile ist 100px hoch, die letzte auch, der Rest geht in die Mitte */
+  grid-template-rows: 80px 1fr 100px; /* Die erste Zeile ist 80px hoch, die letzte auch, der Rest geht in die Mitte */
   height: 100vh; /* Der Container, d.h. der Body, ist nur so hoch wie der Viewport */
 }
 
 .main {
-  max-width: 800px;
   margin: 0 auto;
-  display: flex;
+  width: 100%;
+  overflow: auto;
+  /* display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-content: flex-start;
-  overflow: auto; /* Alles was überläuft ist über scrollen erreichbar */
+  overflow: auto; Alles was überläuft ist über scrollen erreichbar */
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 320px;
+  justify-content: center;
+  align-content: start;
 }
 
-@media (min-width: 600px){
-  .main {
-    display: grid;
-    gap: 1em;
-    grid-template-columns: 1fr 1fr;
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template-columns: 320px 320px;
   }
-
 }
 
-@media (min-width: 800px){
-  .main {
-    display: grid;
-    gap: 1em;
-    grid-template-columns: 1fr 1fr 1fr;
+@media (min-width: 970px) {
+  .grid-container {
+    grid-template-columns: 320px 320px 320px;
   }
-
 }
+
+
+
+

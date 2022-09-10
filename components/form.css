@@ -1,0 +1,37 @@
+form {
+  border: 1px solid black;
+  border-radius: 0.5em;
+  display: block;
+  max-width: 600px;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+form textarea,
+form input,
+form button {
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.5em;
+  margin: 1em 0;
+}
+.leftCharacters {
+  font-size: 0.7em;
+  text-align: right;
+}
+.explode-animation {
+  animation-name: animationExplode;
+  animation-duration: 0.5s;
+}
+
+@keyframes animationExplode {
+  0% {
+    transform: scale(0);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

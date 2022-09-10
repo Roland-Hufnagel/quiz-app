@@ -1,19 +1,27 @@
-// const answerButton = document.querySelector('[data-js="answer-button"]');
-
-// answerButton.addEventListener("click", () => {
-//   const answer = document.querySelector('[data-js="answer"]');
-
-//   answer.classList.toggle("card__answer--off");
-
-//   answerButton.textContent == "Hide Answer"
-//     ? (answerButton.textContent = "Show Answer")
-//     : (answerButton.textContent = "Hide Answer");
-// });
-// die Alternative:
-const addCardButton = document.querySelector('[data-js="addCard"]');
-addCardButton.addEventListener("click", (event) => {
-  createCard();
+// Funktionalität 'show Answer'-Button:
+const answerButton = document.querySelector('[data-js="answer-button"]');
+answerButton.addEventListener("click", () => {
+  const answer = document.querySelector('[data-js="answer"]');
+  answer.classList.toggle("card__answer--off");
+  answerButton.textContent == "Hide Answer"
+    ? (answerButton.textContent = "Show Answer")
+    : (answerButton.textContent = "Hide Answer");
 });
+
+// Funktionalität 'Bookmark'-Button:
+const bookmarkButton = document.querySelector('[data-js="bookmark-button"]');
+  bookmarkButton.addEventListener('click', () => {
+  bookmarkButton.src.endsWith('bookmark.png') ? bookmarkButton.src = 'icons/bookmark-black.png' : bookmarkButton.src = 'icons/bookmark.png';
+  bookmarkButton.classList.add('animation');
+})
+
+
+
+// die Alternative:
+// const addCardButton = document.querySelector('[data-js="addCard"]');
+// addCardButton.addEventListener("click", (event) => {
+//   createCard();
+// });
 
 function createCard() {
   const main = document.querySelector('[data-js="main"]');

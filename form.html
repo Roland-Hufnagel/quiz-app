@@ -6,15 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App!</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="js/form.js" defer></script>
   </head>
   <body class="container">
     <header class="header">
       <h1>WebDev Quizzle</h1>
     </header>
-    <main class="main grid-container">
-      <img src="icons/haken.png" alt="bagger" width="300" />
-      <h1>Hier wird die Profilseite gebaut</h1>
+    <main class="main flex-container" data-js="main">
+      <form class="form" data-js="form">
+        <label for="question">Your Question:</label>
+        <textarea type="text" name="question" id="question" rows="3" maxlength="150" data-js="question-input" required></textarea>
+        <p class="leftCharacters"></p>
+        <label for="answer">Your Answer:</label>
+        <textarea type="text" name="answer" id="answer" rows="3" maxlength="250" data-js="answer-input" required></textarea>
+        <p class="leftCharacters"></p>
+        <label for="tag">Your Tag:</label>
+        <input type="text" name="tag" id="tag" required></input>
+        <button type="submit">Submit</button>
+      </form>
+      <div name="output" data-js="output">
+        
+      </div>
     </main>
+
     <footer class="footer">
       <a
         href="index.html"
@@ -36,7 +50,7 @@
       /></a>
       <a
         href="form.html"
-        class="footer__link"
+        class="footer__link footer--active"
         aria-label="go to create cards site"
         ><img
           class="footer__image"
@@ -45,7 +59,7 @@
       /></a>
       <a
         href="profile.html"
-        class="footer--active footer__link"
+        class="footer__link"
         aria-label="go to profile site"
         ><img class="footer__image" alt="profile icon" src="icons/user.png"
       /></a>
