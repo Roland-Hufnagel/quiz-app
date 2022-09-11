@@ -49,6 +49,7 @@ function createCard(data) {
     bookmarkButton.src.endsWith("bookmark.png")
       ? (bookmarkButton.src = "icons/bookmark-black.png")
       : (bookmarkButton.src = "icons/bookmark.png");
+      bookmarkButton.classList.toggle("small-animation");
   });
   //Show Answer Eventlistener hinzufügen:
   const answerButton = section.querySelector('[data-js="answer-button"]');

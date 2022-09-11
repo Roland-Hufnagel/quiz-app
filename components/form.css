@@ -19,6 +19,14 @@ form button {
   font-size: 0.7em;
   text-align: right;
 }
+.output {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.small-animation {
+  animation-name: animationFade;
+  animation-duration: 0.3s;
+}
 .explode-animation {
   animation-name: animationExplode;
   animation-duration: 0.5s;
@@ -30,6 +38,17 @@ form button {
   }
   70% {
     transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes animationFade {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(0.1);
   }
   100% {
     transform: scale(1);
