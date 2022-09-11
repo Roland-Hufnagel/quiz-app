@@ -1,17 +1,44 @@
 // Funktionalität Create Card
 const form = document.querySelector('[data-js="form"]');
+form.querySelector('[data-js="question-input"]').focus();
+
+// Funktionalität '...Characters left':
+const questionInput = form.querySelector('[data-js="question-input"]');
+const answerInput = form.querySelector('[data-js="answer-input"]');
+const max1 = questionInput.maxLength;
+const max2 = answerInput.maxLength;
+
+resetLeftChar();
+function resetLeftChar() {
+  questionInput.nextElementSibling.textContent = `(${max1} Characters left)`;
+  answerInput.nextElementSibling.textContent = `(${max2} Characters left)`;
+}
+questionInput.addEventListener("input", (event) => {
+  const actualInputLength = questionInput.value.length;
+  questionInput.nextElementSibling.textContent = `(${
+    max1 - actualInputLength
+  } characters left.)`;
+});
+
+answerInput.addEventListener("input", (event) => {
+  const actualInputLength = answerInput.value.length;
+  answerInput.nextElementSibling.textContent = `(${
+    max2 - actualInputLength
+  } characters left.)`;
+});
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
   const data = Object.fromEntries(formData);
   createCard(data);
+  resetLeftChar();
   form.reset();
   form.querySelector('[data-js="question-input"]').focus();
-  const paragraphs = form.querySelectorAll("p");
-  for (const p of paragraphs) {
-    p.textContent = "";
-  }
+  // const paragraphs = form.querySelectorAll("p");
+  // for (const p of paragraphs) {
+  //   p.textContent = "";
+  // }
 });
 
 function createCard(data) {
@@ -49,37 +76,16 @@ function createCard(data) {
     bookmarkButton.src.endsWith("bookmark.png")
       ? (bookmarkButton.src = "icons/bookmark-black.png")
       : (bookmarkButton.src = "icons/bookmark.png");
-      bookmarkButton.classList.toggle("small-animation");
+    bookmarkButton.classList.toggle("small-animation");
   });
   //Show Answer Eventlistener hinzufügen:
   const answerButton = section.querySelector('[data-js="answer-button"]');
   answerButton.addEventListener("click", (event) => {
-    console.log(event.target.nextElementSibling); //querySelector geht hier nicht, weil immer das erste Element genommen wird!!!
     //const answer = document.querySelector('[data-js="answer"]');
-    const answer = event.target.nextElementSibling;
+    const answer = event.target.nextElementSibling; //querySelector geht hier nicht, weil immer das erste Element genommen wird!!!
     answer.classList.toggle("card__answer--off");
     answerButton.textContent == "Hide Answer"
       ? (answerButton.textContent = "Show Answer")
       : (answerButton.textContent = "Hide Answer");
   });
 }
-
-// Funktionalität '...Characters left':
-const questionInput = form.querySelector('[data-js="question-input"]');
-const answerInput = form.querySelector('[data-js="answer-input"]');
-const max1 = questionInput.maxLength;
-const max2 = answerInput.maxLength;
-
-questionInput.addEventListener("input", (event) => {
-  const actualInputLength = questionInput.value.length;
-  questionInput.nextElementSibling.textContent = `(${
-    max1 - actualInputLength
-  } characters left.)`;
-});
-
-answerInput.addEventListener("input", (event) => {
-  const actualInputLength = answerInput.value.length;
-  answerInput.nextElementSibling.textContent = `(${
-    max2 - actualInputLength
-  } characters left.)`;
-});

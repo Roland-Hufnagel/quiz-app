@@ -27,6 +27,7 @@ form button {
   animation-name: animationFade;
   animation-duration: 0.3s;
 }
+
 .explode-animation {
   animation-name: animationExplode;
   animation-duration: 0.5s;
