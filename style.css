@@ -25,19 +25,12 @@ body {
   margin: 0 auto;
   width: 100%;
   overflow: auto;
- 
-  /* display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
-  overflow: auto; Alles was überläuft ist über scrollen erreichbar */
 }
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
   align-content: start;
-  /* gap: 1em; */
 }
 
 @media (min-width: 680px) {
@@ -48,11 +41,7 @@ body {
 
 @media (min-width: 1000px) {
   .grid-container {
-    width: 1200px;
+    max-width: 1200px;
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
-
-
-
