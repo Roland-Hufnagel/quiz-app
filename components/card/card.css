@@ -8,6 +8,12 @@
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.card__list{
+  list-style: none;
+  padding: 0;
+  
+}
+
 .card__question {
   margin: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -16,6 +22,7 @@
 .card__answer {
   font-family: monospace;
   margin: 1em;
+  font-size: 1rem;
 }
 
 .card__answer--off {
@@ -47,7 +54,8 @@
 }
 .card__tag-list {
   padding: 0; /* a list has as default padding-left of 20px; */
+  margin: 1em;
 }
-.card__list-item {
+.card__tag-list-item {
   display: inline;
 }

@@ -1,66 +1,24 @@
-// Funktionalität 'show Answer'-Button:
-const answerButton = document.querySelector('[data-js="answer-button"]');
-answerButton.addEventListener("click", () => {
-  const answer = document.querySelector('[data-js="answer"]');
-  answer.classList.toggle("card__answer--off");
-  answerButton.textContent == "Hide Answer"
-    ? (answerButton.textContent = "Show Answer")
-    : (answerButton.textContent = "Hide Answer");
+import createCard from "../components/card/card.js";
+//import {cards} from "../components/data/data.js";
+import { loadCards } from "../components/localstorage.js";
+const cardList = document.querySelector('[data-js="card-list"]');
+
+// cards.forEach(card => {
+//   const newCard = createCard(card.question, card.answer, card.tag);
+//   cardList.append(newCard);
+//})
+// const objArray = JSON.stringify(cards);
+// console.log(objArray);
+// localStorage.setItem("cards", objArray);
+
+// const card1 = createCard("Frage1", "Antwort1", "Tag1");
+// const card2 = createCard("Frage2", "Antwort2", "Tag2");
+// const card3 = createCard("Frage3", "Antwort3", "Tag3");
+// cardList.append(card1, card2, card3);
+
+const cards = loadCards();
+
+cards.forEach((card) => {
+  const newCard = createCard(card.question, card.answer, card.tag);
+  cardList.append(newCard);
 });
-
-// Funktionalität 'Bookmark'-Button:
-const bookmarkButton = document.querySelector('[data-js="bookmark-button"]');
-  bookmarkButton.addEventListener('click', () => {
-  bookmarkButton.src.endsWith('bookmark.png') ? bookmarkButton.src = 'icons/bookmark-black.png' : bookmarkButton.src = 'icons/bookmark.png';
-  bookmarkButton.classList.add('animation');
-})
-
-
-
-// die Alternative:
-// const addCardButton = document.querySelector('[data-js="addCard"]');
-// addCardButton.addEventListener("click", (event) => {
-//   createCard();
-// });
-
-function createCard() {
-  const main = document.querySelector('[data-js="main"]');
-
-  const section = document.createElement("section");
-  section.classList.add("card");
-  section.innerHTML = `
-  <p class="card__question">What properties flips the axes in flexbox?</p>
-        
-        <p class="card__answer card__answer--off" data-js="answer">
-          Property <strong>flex-direction</strong> will do so
-        </p>
-        <ul class="card__tag-list">
-          <li class="card__list-item"><button>#html</button></li>
-          <li class="card__list-item"><button>#flexbox</button></li>
-          <li class="card__list-item"><button>#css</button></li>
-        </ul>
-        <input
-          type="image"
-          alt="bookmark icon"
-          class="card__bookmark-icon"
-          src="icons/bookmark.png"
-        />
-  `;
-  const button = document.createElement("button");
-  button.classList.add("card__answer-button");
-  button.textContent = "Show Answer";
-  section.insertBefore(button, section.children[2]);
-  const p = document.createElement("p");
-  p.classList.add("card__answer");
-  p.classList.add("card__answer--off");
-  p.innerHTML = "Property <strong>flex-direction</strong> will do so";
-  section.insertBefore(p, section.children[3]);
-  button.addEventListener("click", () => {
-    p.classList.toggle("card__answer--off");
-    button.textContent == "Hide Answer"
-      ? (button.textContent = "Show Answer")
-      : (button.textContent = "Hide Answer");
-  });
-
-  main.append(section);
-}

@@ -6,36 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App!</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="js/index.js" defer></script>
+    <script type="module" src="js/index.js" defer></script>
   </head>
   <body class="container">
     <header class="header">
       <h1>WebDev Quizzle</h1>
     </header>
-    <main class="main grid-container" data-js="main">
-      <section class="card">
-        <p class="card__question">What properties flips the axes in flexbox?</p>
-        <button class="card__answer-button" data-js="answer-button">
-          Show Answer
-        </button>
-        <p class="card__answer card__answer--off" data-js="answer">
-          The Property <strong>flex-direction</strong> does so!
-        </p>
-        <ul class="card__tag-list">
-          <li class="card__list-item"><button>#html</button></li>
-          <li class="card__list-item"><button>#flexbox</button></li>
-          <li class="card__list-item"><button>#css</button></li>
-        </ul>
-        <input
-          type="image"
-          alt="bookmark icon"
-          class="card__bookmark-icon"
-          src="icons/bookmark.png"
-          data-js="bookmark-button"
-        />
-      </section>
 
-      
+    <main class="main" data-js="main">
+      <ul class="card__list grid-container" data-js="card-list">
+        
+      </ul>
     </main>
 
     <footer class="footer">
@@ -43,7 +24,10 @@
         href="index.html"
         class="footer__link footer--active"
         aria-label="go to homepage"
-        ><img class="footer__image" alt="home icon" src="icons/navHomeIcon-64.png"
+        ><img
+          class="footer__image"
+          alt="home icon"
+          src="icons/navHomeIcon-64.png"
       /></a>
       <a
         href="bookmark.html"
@@ -67,7 +51,10 @@
         href="profile.html"
         class="footer__link"
         aria-label="go to profile site"
-        ><img class="footer__image" alt="profile icon" src="icons/navProfileIcon-64.png"
+        ><img
+          class="footer__image"
+          alt="profile icon"
+          src="icons/navProfileIcon-64.png"
       /></a>
     </footer>
   </body>

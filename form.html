@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App!</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="js/form.js" defer></script>
+    <script type="module" src="components/form/form.js" defer></script>
   </head>
   <body class="container">
     <header class="header">
@@ -21,12 +21,13 @@
         <textarea type="text" name="answer" id="answer" rows="3" maxlength="250" data-js="answer-input" required></textarea>
         <p class="leftCharacters"></p>
         <label for="tag">Your Tag:</label>
-        <input type="text" name="tag" id="tag" required></input>
+        <input type="text" name="tag" id="tag" required />
         <button type="submit">Submit</button>
       </form>
-      <div name="output" class="output" data-js="output">
-        
-      </div>
+      <ul class="card__list output" data-js="card-list">
+
+      </ul>
+      
     </main>
 
     <footer class="footer">
